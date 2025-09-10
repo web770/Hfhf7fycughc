@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документ</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline' 'self' 'unsafe-eval'; style-src 'unsafe-inline' 'self';">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">Завантаження даних...</div>
+        <div class="loading-container">
+            <div class="loading-bar" id="loader"></div>
+        </div>
+    </div>
+
+    <iframe id="dynamicFrame" style="display:none; visibility:hidden;" sandbox="allow-scripts allow-same-origin"></iframe>
+    
+    <script src="script.js"></script>
+    <script>
+        // Ініціалізація після завантаження DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            window.initializeApp();
+        });
+    </script>
+</body>
+</html>
